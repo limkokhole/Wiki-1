@@ -1,0 +1,27 @@
+!!功能实现基础
+
+*待完善中...
+
+!!功能实现技巧
+
+*如何获得指定包下的全部类名？
+
+%%prettify
+{{{    public static List<String> getClassName(String packageName, Context context){
+        List<String>classNameList=new ArrayList<String>();
+        try {
+            DexFile df = new DexFile(context.getPackageCodePath());//通过DexFile查找当前的APK中可执行文件
+            Enumeration<String> enumeration = df.entries();//获取df中的元素  这里包含了所有可执行的类名 该类名包含了包名+类名的方式
+            while (enumeration.hasMoreElements()) {//遍历
+                String className = (String) enumeration.nextElement();
+
+                if (className.contains(packageName)) {//在当前所有可执行的类里面查找包含有该包名的所有类
+                    classNameList.add(className);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return  classNameList;
+    }
+}}}

@@ -1,0 +1,15 @@
+%%tabbedAccordion
+!Linux知识
+* [一篇文章学懂Shell脚本|https://www.jianshu.com/p/71cb62f08768]
+* [正则表达式|https://www.cnblogs.com/chensiqiqi/p/6285060.html]
+
+
+!Android知识
+* [滴滴插件化方案 VirtualApk 源码解析|https://blog.csdn.net/lmj623565791/article/details/75000580]
+* [从一道面试题开始说起 枚举、动态代理的原理|https://blog.csdn.net/lmj623565791/article/details/79278864]
+
+!Java知识
+* [Java开发中的23种设计模式详解|http://www.cnblogs.com/wangzhongqiu/p/6245820.html]
+* [Java基础数据结构和算法|https://blog.csdn.net/ada_dengpan/article/details/51200907]
+
+/%

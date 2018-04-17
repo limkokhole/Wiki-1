@@ -1,0 +1,13 @@
+!! Wiki Syntax
+
+The quick list of wiki syntax is available at the __Help__ tab at the top of the page (when you are editing it).
+
+The complete list of the syntax is at :
+* [TextFormattingRules|https://jspwiki-wiki.apache.org/Wiki.jsp?page=TextFormattingRules]
+* [EditFindAndReplaceHelp|https://jspwiki-wiki.apache.org/Wiki.jsp?page=EditFindAndReplaceHelp]
+
+There are also some css/javascript styles at : 
+* [JSPWikiStyle|https://jspwiki-wiki.apache.org/Wiki.jsp?page=JSPWikiStyle]
+
+[{ALLOW edit Admin}]
+[{ALLOW view All}]
