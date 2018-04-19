@@ -1,86 +1,492 @@
-*系统语言修改：dpkg-reconfigure locales
+* 挂载ftp目录：curlftpfs -o utf8 -o user=administrator:Cyber@123 ftp://192.168.220.23 /mnt/
 
-* 包管理
-** dpkg -i akonadi-ews_0.8.0-1_amd64.deb
-** Apt
-** Aptitude
-** Apt-get
-**
-** Dpkg-query -S /sbin/ifconfig
-** Dpkg -l 显示所有安装包
-** Dpkg -L vim 显示安装包位置信息
-** Dpkg -s vim 显示安装包信息
-** Dpkg -r 删除包名保留配置
-** Dpkg -p 纯粹的删除包括配置文件
-**
-** 查找安装文件的来源：apt-file search
-** Which ifconfig
-** 查找安装包中的文件 ： dpkg -L coz-profiler
-** 开启支持32位库：dpkg --add-architecture i386
-** 清除aptitude包缓存 ： rm -rf /var/lib/apt/lists/*
 ----
-* 查找文件：locate/updatedb
-* 查看无线网卡： iwconfig
 
-* 查看系统信息：
-** lsb_release -a
-** uname -a
-** cat /etc/os-release
-** cat /proc/version
-** cat /proc/cpuinfo
-** free -h
-** htop
-** sudo fdisk -l
-** df -h
-** hostname
-** cat /etc/resolv.conf
-** lspci
-** lsusb
-** lsmod 内核模块
-** env 所有环境变量
-** last 用户登陆情况和日志
-** w 在线用户
-** uptime
-** id famgy
-** netstat -46lpn
-** netstat -s 网络统计
-** cut -d ：-f 1 /etc/passwd
-** cut -d : -f 1 /etc/group 
-** journalctl -f -u fmd
+* 挂载smb目录：mount -t cifs //192.168.220.230/temp /mnt -o username=gengpf,password=zxcv --read-only
 
-* 后台运行：
-** jobs      //查看任务，返回任务编号n和进程号
-** bg  %n   //将编号为n的任务转后台运行
-** fg  %n   //将编号为n的任务转前台运行
-** ctrl+z    //挂起当前任务
-** ctrl+c    //结束当前任务
+----
+
+* 显示文件信息(如文件大小) : stat -c %s apks/cbg.apk
+
+----
+
+*Who
+*W
+*last
+
+----
+
+*路由器的配置：
+[router-config.png]
+* 如上图所示，PC0机器和PC1机器之间经过两个路由器，要想使这两台机器通信，路由设置如下：
+**Route0路由器设置：
+***	ip add 192.168.1.1 255.255.255.0
+***	ip add 192.168.2.1 255.255.255.0
+***	ip route 192.168.3.0 255.255.255.0 192.168.2.2
+**Route1路由器设置：
+***	ip add 192.168.2.2 255.255.255.0
+***	ip add 192.168.3.1 255.255.255.0
+***	ip route 192.168.1.0 255.255.255.0 192.168.2.1
+
+----
+
+* 查看.so文件中包含的函数名：nm -D mylib.so
+
+----
+
+* 普通用户没有执行权限办法：http://www.jianshu.com/p/95e397570896
+
+----
+
+* 同步时间
+# 输入ntpdate time.nist.gov同步网络时间
+结果：3 Jun 15:42:39 ntpdate[4721]: adjust time server 211.115.194.21 offset -0.005885 sec
+出现上述结果代表时间同步成功，上面的大致意思为调整时间为服务器211.115.194.21的时间，相差-0.005885秒的时间
+如果上面time.nist.gov服务器同步不了，可以换下面几个时间服务器试试：time.nist.govtime.nuri.net0.asia.pool.ntp.org1.asia.pool.ntp.org2.asia.pool.ntp.org3.asia.pool.ntp.org
+# 同步时间成功后调整硬件时间
+# hwclock -w
+----
+
+* vim权限用法：:w !sudo tee %
+
+----
+
+* 聊天工具netchat: (属于安装包nmap中) ： ncat -l 1234ncat 127.0.0.1 1234
+
+----
+
+* 设置lib库查找路径：
+** /etc/ld.so.conf.d/hdfs-x86_64.conf
+** ldconfig 
+
+----
+
+pgrep fmd                                                                                                                                                                   cat /proc/24924/environ | tr '\0' '\n'                                                                                            
+
+ rpm -qf /usr/sbin/fmd     fmd-2.11-2.el7.centos.x86_64 
+
+找内容文件：grep -r 180.168.41.175 /root/hadoop-2.8.0/ 
+
+strace -p 48549 epoll_wait(18, [{EPOLLIN, {u32=31, u64=3172015454709350431}}], 20, -1) = 1 read(31, "\0\351\0T\241\177\0\0\240o\5T\241\177\0\0\240\16\4T\241\177\0\0\340\332\3T\241\177\0\0"..., 800) = 176 write(17, "\0X\4T\241\177\0\0\315\361\277\270\16\r\21\347\253\260D\250BC\376\r", 24) = 24 socket(AF_UNIX, SOCK_STREAM, 0)         = 46 connect(46, {sa_family=AF_UNIX, sun_path="/var/uuidd/request"}, 110) = 0 write(46, "\4\350\3\0\0", 5)            = 5 read(46, "\24\0\0\0", 4)                = 4 read(46, "\317\33\350x\16\r\21\347\253\260D\250BC\376\r\350\3\0\0", 20) = 20 close(46) 
 
 
-* Dhclient enp2s0 自动获取ip
-* Nslookup www.baidu.com
-* Traceroute www.baidu.com
-* Iptables -L
+Semaphore 信号量 ：
+sem_timedwait（）
 
 
-* ssh免密码登陆配置：
-** ssh-keyen -t rsa
-** Ssh-copy-id -i .ssh/id_rsa.pub root@107.174.69.226
+[root@ndlp ~]# ps -aux | grep fmd root      2502  0.0  0.5 463880 187900 ?       Ss   3月03  10:00 /usr/sbin/fmd  [root@ndlp ~]# lsof -p 2502
+fmd     2502 root   12w      REG               0,16        80   19925 /file_daemon 
 
-* 检查ip是否冲突：
-** Arping 192.168.220.140
-** 如果没有信息显示，说明IP唯一；
-** 如果unicast replay from （mac地址）冲突
 
-* u盘名称修改：
-** Umount /dev/sddev/sdb1
-** Ntfslabel /dev/sdb1 famgyUDisk
+gcc -g `pkg-config --cflags mysqlclient` -o mysql-test sql_interface.c `pkg-config --libs mysqlclient` 
 
-* 磁盘分区：fdisk /dev/sdb
-* 文件系统格式化：mkfs.n
+# jobs      //查看任务，返回任务编号n和进程号
+# bg  %n   //将编号为n的任务转后台运行
+# fg  %n   //将编号为n的任务转前台运行
+# ctrl+z    //挂起当前任务
+# ctrl+c    //结束当前任务
 
-* 网络端口查询命令：ss -46lpn
 
-* 修改照片尺寸：
-** Convert -resize 640x386 1.jpg out1.jpg
-** Find ./ -name ‘*.jpg’ -exec convert -resize 640x380 {}{};
-** https://blog.csdn.net/jiangxinyu/article/details/1698997
+Grub配置开机启动顺序：
+vim /etc/default/grub
+update-grub
+
+
+而面向对象的程序设计把计算机程序视为一组对象的集合，而每个对象都可以接收其他对象发过来的消息，并处理这些消息，计算机程序的执行就是一系列消息在各个对象之间传递。
+
+统计代码量： find src util conf doc -regex ".*[.][ch]$" -exec cat {} \; | wc
+
+通配符和正则表达式的区别：
+文本过滤工具里，都是用正则表达式，比如像awk，sed，等，是针对文件的内容的;
+而通配符多用在文件名上，比如查找find，ls，cp，等等
+
+
+
+[root@ndlp json-c]# pkg-config --cflags --libs json-c -I/usr/include/json-c -ljson-c 
+
+函数popen与system的区别
+
+显示：文件链接 和 目录链接
+ls /bin -d
+Ls /bin/findmnt -al
+
+
+Crond:
+man 5 crontab
+# run at 2:15pm on the first of every month -- output mailed to paul 15 14 1 * *     $HOME/bin/monthly
+监控文件资源情况：
+inotifywait -m -r /var/cache/fmd/2016-12-28/
+linux前后台切换：
+fg、bg、jobs、&、ctrl + z
+
+
+[root@localhost gpf]# lsof -i:143               COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME dovecot 29488 root   37u  IPv4  47451      0t0  TCP *:imap (LISTEN) dovecot 29488 root   38u  IPv6  47452      0t0  TCP *:imap (LISTEN) 
+
+
+systemd相关手册
+man systemd.service
+
+
+netstat –i 查看网卡mtu信息
+
+
+Nmap 主机名
+Nmap -A ip
+
+Cat /etc/issue
+Cat /proc/version
+Uname –a
+Cat /etc/os-release
+Cat /etc/redhat-release
+
+
+
+Yum provides pkg-config
+
+
+查看是32位还是64位:
+动态库：File libfuzzy.so
+静态库：objdump -a libz.a
+
+删除条件下的文件：
+shopt -s extglob
+Rm -rf ！（file1|file2）
+
+
+
+查看所有环境变量情况 : env
+显示所有组信息：getent group
+
+Vim替换字符串：
+               全局替换命令为：:%s/源字符串/目的字符串/g
+               :%s/root/home\/gpf/g
+
+崩溃记录：coredumpctl
+广播：wall "reboot later"
+
+
+查看安装包内容：rpm -qlp rpm-filename.rpm
+yum provides liblzma.soapt-file search liblzma.so
+
+
+查看磁盘编号：/dev/disk/by-id
+新增硬盘：http://wenku.baidu.com/link?url=HVMlm9K5lhNlu1G2akXBTgXx1J6Kwc9CR2VGJ2YCawlNCJihAyWq-sqClZ7QfLp2Fxum6tfg_yUE4ZQYa8witftS1qhZICYhW61LV9crAhS
+
+域名解析配置文件：
+Vim /etc/resolv.conf
+Nameserver 114.114.114.114
+
+查看硬件性能：lscpu  、 free（dmidecode -t memory）、lsblk（fdisk -l） 、ethtool p3p3 
+
+显示系统信息：
+cat /etc/os-release
+当前运行内核版本：uname –a
+默认启动内核版本：grubby --default-kernel
+指定启动内核版本：grubby --set-default=/boot/vmlinuz-4.5.5-300.fc24.x86_64
+
+
+
+做软链接：ln -s -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+
+smba命令行使用：
+smbclient -U gpf -m SMB3  //192.168.220.242/gpfput big.zip
+
+
+查看文件用户：getent passwd
+
+
+修改时区：tzselect修改时间：date -s 2016-08-22
+
+
+查看服务程序启动依赖：
+systemd-analyze critical-chainsystemctl list-dependencies 
+systemctl list-dependencies zfs-mount.service
+systemctl list-dependencies --reverse zfs-mount.service systemd-analyze blame 
+
+
+查看安装包中的内容文件信息：
+rpmquery -l mariadb
+查看管理的服务：
+systemctl list-units
+
+
+查看程序是否自动启动：
+[root@localhost ~]# chkconfig 注意：该输出结果只显示 SysV 服务，并不包含原生 systemd 服务。SysV 配置数据可能被原生 systemd 配置覆盖。        如果您想列出 systemd 服务,请执行 'systemctl list-unit-files'。      欲查看对特定 target 启用的服务请执行      'systemctl list-dependencies [target]'。 netconsole      0:关    1:关    2:关    3:关    4:关    5:关    6:关 network         0:关    1:关    2:开    3:开    4:开    5:开    6:关 [root@localhost ~]# runlevel N 3 
+
+
+Lsblk  显示系统当前可用的硬件块（如sdb硬盘）
+
+systemctl list-units 显示systemctl控制的服务
+getent passwd    查看mysql服务相关信息
+chown mysql:mysql /var/lib/mysql/    
+
+
+Net-tool工具 ： 
+ifconfig   
+netstat  -46lpn
+Ip neigh
+
+ethtool enp2s0 查看网卡信息
+
+命令行补全工具：bash-completion
+
+查看目录下文件信息
+ ls -al | grep "^-"    文件
+ ls -al | grep "^d"    目录
+ls -al | grep "^-" | wc -l   文件数量
+
+在一个目录中保留最近三个月的文件，三个月前的文件自动删除。
+find ./  -mtime +92 -type f -name *.mail[12] -exec rm -rf {} \;
+find ./ -type f -name *.map
+find ./ -type f | xargs grep '\-lipsec' 
+
+find 2016-08-30 -name "file.meta" -exec grep -H SMTP {} \;
+find ./ -type f -name "file.meta" -exec grep "ADM" -H {} \;
+find /var/cache/fmd/2017-03-22/ -cmin -3 -type f -name "file.meta" -exec grep -H "172.172.24.40" {} \;find /var/cache/fmd/2017-03-22/ -cmin -10 -type f -name "file.meta" -exec pstat-meta-match  'i_addr = 172.172.24.40 & protocol = DCC & file_name < xls ' {} \; 配置动态ip：
+Dhclient 获取ip
+Dhckient -r 释放ip
+
+
+配置静态ip ：
+ONBOOT=yes DEVICE=p3p3 BOOTPROTO=staticIPADDR=192.168.220.201 PREFIX=24 GATEWAY=192.168.220.254 MTU=1500 DEFROUTE=yes IPV6INIT=no USERCTL=no
+
+查看网络服务启动日志：vim /var/log/messages | grep network 
+
+找到文件来源 ： dnf provides /usr/include/fuzzy.h
+Dnf autoremove
+
+程序没权限root用户，配置/etc/sysconfig/selinux
+selinux=disable
+
+df                                查看磁盘使用情况
+ vim /etc/fstab （分区磁盘uuid）
+ls -l /dev/disk/by-uuid/
+
+du -sh *                       显示聪明的文件大小信息（当前目录下的文件）
+rpm -qc vsftpd                 查看配置文件所在路径
+rpm -qpR mld-1.1-1.el7.centos.x86_64.rpm 查看安装包依赖关系
+yum erase avahi.x86_64         yum卸载应用               
+which  sha1sum 查找命令源码
+yum provides sha1sum           找命令工具的提供者  
+yum install yum-utils
+yumdownloader --source coreutils
+Yum list installed
+
+安装man-page：
+yum provides /usr/share/man/man3/fopen*
+yum install man-pages
+
+解压文件命令：
+unar coreutils-8.22-15.el7_2.1.src.rpm
+
+less                           翻页
+ps -aux                        显示所有进程信息
+ps -xH                         显示所有线程信息
+
+scp root@192.168.220.159:/etc/yum.repos.d/ndlp.repo /etc/yum.repos.d/    （ssh远程安全拷贝）
+--------------------------------------------------------------------------------------------------------------------
+
+修改所有子目录文件权限            chmod 777 aaa -R               
+显示安装的应用程序路径            type gcc 或 whereis g++        
+消息队列fd文件目录                ls /dev/mqueue/
+可以打印错误信息                  printf("mq_open failed: %m\n");   %m是strerror(errno)的替代
+监控文件系统操作                  inotifywait （http://world77.blog.51cto.com/414605/1143985）
+查看用户信息                      id gpf （显示 ：uid=1002(gpf) gid=1002(gpf) 组=1002(gpf),987(wireshark) ）
+自动查找编译连接                  pkg-config --cflags --libs json-c（Makefile中使用：CFLAGS += $(shell pkg-config --cflags --libs json-c)）
+找动态链接库                      ldconfig -p | grep json-c.so （locate json-c.so）
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+更新系统： yum update
+配置ftp： http://my.oschina.net/u/2344008/blog/470096                      
+配置Samba(需要重启设备)：         http://jingyan.baidu.com/article/3aed632e061de77010809127.html
+清除samba登录密码                 http://blog.csdn.net/ichsonx/article/details/40041943
+systemctl用法                     http://www.linuxidc.com/Linux/2014-11/109236.htm
+Linux中对文件删除函数unlink       http://blog.chinaunix.net/uid-26983585-id-3245451.html
+vnc远程桌面配置                   http://jingyan.baidu.com/article/e4511cf32f67ee2b855eaf7d.html
+kde桌面共享：krfb         Krdb 
+
+pkg-config查找编译连接            http://blog.csdn.net/linux7985/article/details/6005267      
+
+
+安装epel源                 yum -y install epel-release
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+增加应用程序权限：
+[root@ifcos meta]# ls -l `which dumpcap`
+-rwxr-x--- 1 root wireshark 83616 10月 22 2014 /usr/sbin/dumpcap
+[root@ifcos meta]# usermod gpf -a  -G wireshark
+[root@ifcos meta]# geten
+getenforce  getent
+[root@ifcos meta]# geten
+getenforce  getent
+[root@ifcos meta]# id gpf
+uid=1002(gpf) gid=1002(gpf) 组=1002(gpf),987(wireshark)
+[root@ifcos meta]# ^C
+[root@ifcos meta]# chmo
+chmod    chmorph
+[root@ifcos meta]# chmod g+s `which dumpcap`
+[root@ifcos meta]# ls -l `which dumpcap`
+-rwxr-s--- 1 root wireshark 83616 10月 22 2014 /usr/sbin/dumpcap
+[root@ifcos meta]# chmod g-s `which dumpcap`
+[root@ifcos meta]# chmod u+s `which dumpcap`
+需要重启设备
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+修改系统为中文：
+yum groupinstall "Chinese Support" -y
+localectl set-locale LANG=zh_CN.UTF-8
+reboot
+
+yum list | grep fmd
+yum remove fmd
+yum install fmd
+删除旧的内核
+rpm -qa | grep kernel
+yum remove kernel-PAE-2.6.32.11-99.fc12.i686
+
+
+ tar zcf fmd-1.0.tar.gz fmd-1.0
+ tar cfJ ndlpC-1.0.tar.xz ndlpC-1.0.1/
+ 
+tar.gz   是linux下的文件压缩格式：
+　　　　　　　　　　　压缩命令　tar   -zcf   XXXXXX.tar.gz
+　　　　　　　　　　　解压命令　tar   -zxf   XXXXXX.tar.gz
+
+						  c x z(gz)/j(bz2)/J(xz) f
+
+
+--------------------------------------------------------------------
+linux 如何添加 新源：
+http://mirrors.163.com/
+http://mirrors.aliyun.com/
+
+--------------------------------------------------------------------
+linux内存检测工具 ： Valgrind
+
+http://blog.csdn.net/wzzfeitian/article/details/8567030
+
+--------------------------------------------------------------------
+如何开始使用开源库开发程序：（步骤）
+dnf search gtest
+dnf install gtest.x86_64
+dnf install gtest-devel.x86_64
+rpmquery -l gtest
+rpmquery -l gtest-devel
+
+cd /usr/bin/gtest-config
+gtest-config --help
+gtest-config --libs
+
+cd /usr/share/doc/gtest/
+vim  README
+
+文件权限控制：
+Getfacl /sbin/smartd
+
+添加用户sudo功能：
+Sudoedit /etc/sodoers
+添加：gpf All=（All） All
+
+
+-------------------------------------------------------------------
+查看端口号被占用情况 ： fuser -n tcp 80
+
+-------------------------------------------------------------------
+查找目录下的所有文件中是否含有某个字符串 
+find ./ | xargs grep "IBM" 
+
+-------------------------------------------------------------------
+内存泄漏测试
+添加编译选项 ：export CFLAGS="-fsanitize=address -g"
+查看日志     : journalctl -rb 
+	       /libasan
+	Dnf install liblsan
+
+--------------------------------------------------------------------
+在windows下查询mac地址：
+先ping ip
+arp -a “目标IP”
+
+-------------------------------------------------------------------
+linux安装优盘制作： dd if=***.iso of=/dev/sd*** seek=0
+恢复并完全格式化 ：
+                                    umount /dev/sdb1
+                                          mkfs.vfat  /dev/sdb  
+
+-------------------------------------------------------------------
+cmake 指定安装目录 ： cmake -DCMAKE_INSTALL_PREFIX=/usr -DLIB_SUFFIX=64 ..
+
+----------------------------------------------------------------
+命令行敲写历史命令 ： ctl + r 
+
+----------------------------------------------------------------
+经典例子学习：
+http://blog.csdn.net/rss.html?type=column&column=linuxexample
+
+-----------------------------------------------------------------
+存在多个dhcp服务器，可新建或者配置文件/etc/dhcp/dhclient.conf 
+reject 192.168.1.0/24;
+
+
+------------------------------------------------------------------------
+linux 查看可执行文件动态链接库相关信息
+http://blog.sina.com.cn/s/blog_67eb1f2f0100mgd8.html
+ldd <可执行文件名>       查看可执行文件链接了哪些  系统动态链接库
+nm <可执行文件名>       查看可执行文件里面有哪些符号
+strip <可执行文件名>      去除符号表可以给可执行文件瘦身
+如果我们想从可执行程序里面提取出来一点什么文本信息的话，还可以用strings命令
+strings <可执行文件名>
+
+------------------------------------------------------------------
+更改启动顺序及grub配置、美化（去美化）
+更改启动顺序：
+# cat /boot/grub2/grub.cfg |grep Windows
+menuentry
+'Microsoft Windows XP Professional (on /dev/sda1)' --class windows 
+--class os $menuentry_id_option 'osprober-chain-BCB8-99CE' {
+# grub2-set-default 'Microsoft Windows XP Professional (on /dev/sda1)'
+# grub2-mkconfig -o /boot/grub2/grub.cfg
+将启动顺序改回fedora的方法：
+# cat /boot/grub2/grub.cfg |grep Fedora
+# grub2-set-default "Fedora Linux, with Linux 3.1.2-1.fc16.i686.PAE"
+# grub2-editenv list
+# grub2-mkconfig -o /boot/grub2/grub.cfg 
+/etc/default/grub 中可以配置timeout，背景图片等。
+在/etc/default/grub中注释掉 GRUB_THEME="/boot/grub2/themes/system/theme.txt"这一行，即在其前加#号，即可取消fedora18发行版的grub主题。
+改了启动顺序，要重启。
+注意：每次更新软件，如果有内核（kernel）的更新，要运行一下这条命令：
+# grub2-mkconfig -o /boot/grub2/grub.cfg 
+
+--------------------------------------------------------------------------
+系统级性能分析工具 ： perf
+http://blog.csdn.net/zhangskd/article/details/37902159
+
+----------------------------------------------------------------------------------------------
+ls/var/cache/ndbd/pcap -l |wc-l  显示目录下多少文件
+ls/var/cache/ndbd/pcap|sed-n'{$start},{$end}p'    选择性显示第几个到第几个文件
+ls /var/cache/ndbd/pcap/ | awk '{print $0}'  过滤查询整行输出
+cat /etc/ndbd/ndbd.conf | grep NDBD_IFACE_NAME_LIST | awk 'BEGIN{FS="="}{print $2}'  按照“=”分割，只取第二个数据
+
+echo ndlp/file-20161226 | awk -F'-' '{print $2}'
+
+教程 ： http://coolshell.cn/articles/9070.html
+	     http://blog.sina.com.cn/s/blog_7b9ace5301014q8o.html
+shell变量赋值：var_full_path=`echo $4 | awk 'BEGIN{FS=","}{print $1}'`
+
+zfs list -o name,mountpoint | awk 'NR!=1{print $1, $2}'   这里 NR!=1 表示不显示第一行内容
+
+
+按照一定条件找文件：
+find /var/cache/ndbd/pcap -type f \( -newermt '2014-12-02'  -a -not -newermt '2017-01-13' \) 
+ls | awk 'BEGIN{FS="_"}{if($2 >= "20160522"){print $0}}'
+统计多少条数据一共：
+ls/var/cache/ndbd/pcap | wc-l 
+
+-----------------------------------------------------------------------------------------
+定时任务部署cron：http://www.111cn.net/sys/linux/46931.htm

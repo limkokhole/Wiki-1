@@ -6,6 +6,7 @@ The complete list of the syntax is at :
 * [TextFormattingRules|https://jspwiki-wiki.apache.org/Wiki.jsp?page=TextFormattingRules]
 * [EditFindAndReplaceHelp|https://jspwiki-wiki.apache.org/Wiki.jsp?page=EditFindAndReplaceHelp]
 * [SearchPageHelp|https://jspwiki-wiki.apache.org/Wiki.jsp?page=SearchPageHelp]
+* [HowToColorText|https://jspwiki-wiki.apache.org/Wiki.jsp?page=HowToColorText]
 
 There are also some css/javascript styles at : 
 * [JSPWikiStyle|https://jspwiki-wiki.apache.org/Wiki.jsp?page=JSPWikiStyle]

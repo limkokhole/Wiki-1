@@ -1,0 +1,15 @@
+%%(color:blue) 2018-04-19, 晴%%
+----
+%%collapsebox
+!Work
+* 完善了FamgyWeb的相关代码和部署（利用idea工程Maping功能）
+* FamgyWiki创建Diary区块
+* 学习xposed安装部署和模块代码实现:
+**[官方教程|https://github.com/rovo89/XposedBridge/wiki/Development-tutorial#adding-the-xposed-framework-api-to-your-project]
+/%
+
+%%collapsebox
+!Life
+* 想买一件Uniqlo的shirt
+/%
+

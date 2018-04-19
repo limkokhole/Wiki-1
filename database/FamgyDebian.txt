@@ -1,0 +1,86 @@
+*系统语言修改：dpkg-reconfigure locales
+
+* 包管理
+** dpkg -i akonadi-ews_0.8.0-1_amd64.deb
+** Apt
+** Aptitude
+** Apt-get
+**
+** Dpkg-query -S /sbin/ifconfig
+** Dpkg -l 显示所有安装包
+** Dpkg -L vim 显示安装包位置信息
+** Dpkg -s vim 显示安装包信息
+** Dpkg -r 删除包名保留配置
+** Dpkg -p 纯粹的删除包括配置文件
+**
+** 查找安装文件的来源：apt-file search
+** Which ifconfig
+** 查找安装包中的文件 ： dpkg -L coz-profiler
+** 开启支持32位库：dpkg --add-architecture i386
+** 清除aptitude包缓存 ： rm -rf /var/lib/apt/lists/*
+----
+* 查找文件：locate/updatedb
+* 查看无线网卡： iwconfig
+
+* 查看系统信息：
+** lsb_release -a
+** uname -a
+** cat /etc/os-release
+** cat /proc/version
+** cat /proc/cpuinfo
+** free -h
+** htop
+** sudo fdisk -l
+** df -h
+** hostname
+** cat /etc/resolv.conf
+** lspci
+** lsusb
+** lsmod 内核模块
+** env 所有环境变量
+** last 用户登陆情况和日志
+** w 在线用户
+** uptime
+** id famgy
+** netstat -46lpn
+** netstat -s 网络统计
+** cut -d ：-f 1 /etc/passwd
+** cut -d : -f 1 /etc/group 
+** journalctl -f -u fmd
+
+* 后台运行：
+** jobs      //查看任务，返回任务编号n和进程号
+** bg  %n   //将编号为n的任务转后台运行
+** fg  %n   //将编号为n的任务转前台运行
+** ctrl+z    //挂起当前任务
+** ctrl+c    //结束当前任务
+
+
+* Dhclient enp2s0 自动获取ip
+* Nslookup www.baidu.com
+* Traceroute www.baidu.com
+* Iptables -L
+
+
+* ssh免密码登陆配置：
+** ssh-keyen -t rsa
+** Ssh-copy-id -i .ssh/id_rsa.pub root@107.174.69.226
+
+* 检查ip是否冲突：
+** Arping 192.168.220.140
+** 如果没有信息显示，说明IP唯一；
+** 如果unicast replay from （mac地址）冲突
+
+* u盘名称修改：
+** Umount /dev/sddev/sdb1
+** Ntfslabel /dev/sdb1 famgyUDisk
+
+* 磁盘分区：fdisk /dev/sdb
+* 文件系统格式化：mkfs.n
+
+* 网络端口查询命令：ss -46lpn
+
+* 修改照片尺寸：
+** Convert -resize 640x386 1.jpg out1.jpg
+** Find ./ -name ‘*.jpg’ -exec convert -resize 640x380 {}{};
+** https://blog.csdn.net/jiangxinyu/article/details/1698997

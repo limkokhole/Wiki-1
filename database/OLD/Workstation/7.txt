@@ -1,0 +1,7 @@
+!Android安全检测：
+
+* nexus5环境准备（参考：https://blog.csdn.net/u011303443/article/details/53733433）
+** 官方刷机： 
+** TWRP安装：
+** 设备root：
+** xposed安装：

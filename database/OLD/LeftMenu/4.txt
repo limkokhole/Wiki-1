@@ -1,0 +1,32 @@
+%%list-unstyled-hover
+
+%%accordion
+!General
+* [主页|Main]
+* [工作台|Workstation]
+* [知识库|Repository]
+* [新闻|News]
+* [Wiki Syntax]
+
+!Community
+* [DocumentShare]
+* [Github]
+* [Downloads]
+
+!Special Pages
+* [LeftMenu]
+* [Recent Changes]
+* [Search]
+* [Page Index|PageIndex]
+* [未引用页面|UnusedPages]
+* [未定义页面|UndefinedPages]
+
+!About
+* [SystemInfo]
+* [Contact]
+
+/%
+/%
+
+[{ALLOW edit Admin}]
+[{ALLOW view All}]

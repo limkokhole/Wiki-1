@@ -1,0 +1,6 @@
+* 配置文件上传大小 ： 
+{{{location / {  
+            root   html;  
+            index  index.html index.htm;  
+            client_max_body_size    1000m;  
+  }  }}}

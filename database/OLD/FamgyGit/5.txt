@@ -1,0 +1,35 @@
+! 我的github ： github-june 
+
+* Recovery codes :
+
+d9510-1bbc4
+d2476-8cfeb
+6b8ee-0e836
+10820-9e6af
+a1223-e767f
+514c4-03ef6
+d7026-07b7c
+b32fb-0ac72
+7feb1-193cd
+7da97-2f09b
+da2d9-453e5
+75670-1735d
+98216-29dc2
+b2f5d-445b8
+251c7-941c9
+0ae4d-50cd9
+
+----
+
+* git clone https://github.com/github-june/c_stub.git
+
+----
+
+* 新建git源
+** git init
+** git add yourfile
+** git commit -m "first"
+** git push origin master
+
+** [git-config-user.jpg]
+

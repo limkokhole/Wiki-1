@@ -1,0 +1,18 @@
+!Android安全检测：
+
+* nexus5环境准备（参考：[https://blog.csdn.net/u011303443/article/details/53733433]）
+** 官方刷机： 
+***[镜像地址|https://developers.google.com/android/images#hammerhead]
+***刷机步骤：
+####按住音量下键和电源键，手机进入线刷模式（fastboot）
+####解压镜像
+####root权限下执行flash-all.sh
+***%%(color:red)注意/%：请下载factory image,而不是full ota image
+** 刷Recovery（TWRP）：
+***[官方地址(TWRP)|https://twrp.me/devices/lgnexus5.html]
+** 设备root（SuperSU）：
+***[官方地址(SuperSU)|https://download.chainfire.eu/1016/SuperSU/UPDATE-SuperSU-v2.79-20161211114519.zip]
+***安装步骤：
+####按住音量下键和电源键，手机首先进入fastboot模式，通过音量上下键选择recovery模式
+####通过recovery模式的install安装SuperSU.zip
+** xposed安装：
