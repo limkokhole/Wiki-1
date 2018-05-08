@@ -1,0 +1,13 @@
+%%(color:blue) 2018-04-24, 晴%%
+----
+%%collapsebox
+!Work
+* 创建FamgyDetect项目
+** 检测hook框架、开发者模式、游戏外挂、hosts恶意修改、模拟位置
+/%
+
+%%collapsebox
+!Life
+* 看着你：刷微博、刷朋友圈、微信聊天（5元钱说出我的优点）、看书《情商是什么》
+/%
+

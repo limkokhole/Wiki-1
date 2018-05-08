@@ -1,0 +1,18 @@
+
+
+%%prettify
+{{{
+import java.util.Iterator;
+
+ list l = new ArrayList();
+ l.add("aa");
+ l.add("bb");
+ l.add("cc");
+
+ /* 迭代器用于while循环 */
+ Iterator iter = l.iterator();
+ while(iter.hasNext()){
+     String str = (String) iter.next();
+     System.out.println(str);
+ }
+}}}

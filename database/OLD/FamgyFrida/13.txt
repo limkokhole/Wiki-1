@@ -1,0 +1,52 @@
+* [frida官网|https://www.frida.re./]
+----
+
+* 调试 com.famgy.famgydetect.MainActivity
+* 关闭 selinux
+** echo 0 > /sys/fs/selinux/enforce
+** setenforce 0
+* 执行 frida -U com.famgy.famgydetect -l famgydetect.js 
+
+%%prettify
+{{{
+famgy@debian:~/Frida$ cat famgydetect.js 
+setImmediate(function() { //prevent timeout
+            console.log("[*] Starting script");
+            Java.perform(function() {
+                          bClass = Java.use("com.famgy.famgydetect.MainActivity");
+                          bClass.toSystemExit.implementation = function(v) {
+                                           console.log("[*] onClick called");
+                                        }
+                          console.log("[*] onClick handler modified")
+                        })
+})
+}}}
+
+# 执行 python shaizi.py
+{{{import frida, sys
+def on_message(message, data):
+    if message['type'] == 'send':
+        print("[*] {0}".format(message['payload']))
+    else:
+        print(message)
+scr = """
+Java.perform(function () {
+var be= Java.use("com.famgy.famgydetect.MainActivity");
+send(typeof(be));
+send(typeof(be.shaizi));
+send("start")
+be.shaizi.implementation = function(){
+    var type = arguments[0];
+    send("start")
+    send("type="+type);
+    return 5;
+};
+send("end")
+});
+"""
+process = frida.get_usb_device().attach('com.famgy.famgydetect')
+script = process.create_script(scr)
+script.on('message', on_message)
+print('[*] famgydetect Start...')
+script.load()
+sys.stdin.read()}}}

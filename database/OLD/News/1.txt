@@ -1,0 +1,8 @@
+%%tabbedAccordion
+!Linux新闻
+* [Kubuntu Bionic Beaver (18.04 LTS) Beta 2 Released!|https://kubuntu.org/news/kubuntu-bionic-beaver-18-04-lts-beta-2-released/]
+
+!Android新闻
+* [Android开源中国|https://www.oschina.net/android]
+
+/%

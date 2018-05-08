@@ -3,7 +3,7 @@
 %%collapsebox
 !Work
 * 完善了FamgyWeb的相关代码和部署（利用idea工程Maping功能）
-* FamgyWiki创建Diary区块
+* FamgyWiki创建Diary目录
 * %%(color:red) 学习Xposed安装部署和模块代码实现%%
 **[官方教程|https://github.com/rovo89/XposedBridge/wiki/Development-tutorial#adding-the-xposed-framework-api-to-your-project]
 /%

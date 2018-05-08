@@ -1,5 +1,6 @@
 %%tabbedAccordion
 !Linux新闻
+* [Kubuntu 18.04 has been released, featuring the beautiful KDE Plasma 5.12 LTS|https://kubuntu.org/news/kubuntu-18-04-has-been-released/]
 * [Kubuntu Bionic Beaver (18.04 LTS) Beta 2 Released!|https://kubuntu.org/news/kubuntu-bionic-beaver-18-04-lts-beta-2-released/]
 
 !Android新闻

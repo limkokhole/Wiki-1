@@ -1,0 +1,12 @@
+%%(color:blue) 2018-05-08, 晴%%
+----
+%%collapsebox
+!Work
+* 熟悉frida框架，在android环境中的使用。
+* 利用程序maps检测是否有frida模块注入（inject）
+/%
+
+%%collapsebox
+!Life
+* 试用手机刷地铁卡，失败。（用官方app去扫码还不支持，可以使用第三方“易通行”）
+/%

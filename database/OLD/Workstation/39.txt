@@ -1,0 +1,17 @@
+!任务：android设便安全检测：
+#%%(color:green)#框架攻击检测（检测是否存在HOOK框架（xposed/frida/substrate））%%
+#设备位置信息伪造（允许模拟位置开关、GPS定位模拟软件、GPS变化速度）
+#host文件修改（系统host文件篡改感知）
+#开发者选项（检测设备是否开启开发者选项）
+#游戏外挂（八门神器、葫芦侠、烧饼修改器、拇指玩、XX助手）
+
+
+
+----
+
+
+* [阿里系产品Xposed Hook检测机制原理分析|https://bbs.pediy.com/thread-218848.htm]
+* [检查允许模拟位置开关|https://blog.csdn.net/qq_23547831/article/details/52033726]
+* [模拟位置信息hook方式|https://www.cnblogs.com/bingghost/p/5816164.html]
+* [检测设备是否开启开发者选项|https://blog.csdn.net/fang323619/article/details/75053479]
+* [检测游戏作弊|https://blog.csdn.net/u013895270/article/details/45558975]

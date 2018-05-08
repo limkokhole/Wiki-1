@@ -1,0 +1,4 @@
+!Smali逆向调试
+* 把apk里面的编译后的代码转成smali
+** java -jar apktool.jar d myapp.apk -o ~/projects/myapp/src
+** java -jar baksmali-2.2.1.jar  d myapp.apk -o ~/projects/myapp/src

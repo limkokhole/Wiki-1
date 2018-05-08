@@ -1,0 +1,12 @@
+%%(color:blue) 2018-04-24, 晴%%
+----
+%%collapsebox
+!Work
+* 了解hook框架：frida
+;: [官网地址|https://www.frida.re./docs/home/]
+/%
+
+%%collapsebox
+!Life
+* 看新闻 : 朝韩领导人会面直播。
+/%

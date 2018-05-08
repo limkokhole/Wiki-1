@@ -1,0 +1,16 @@
+%%(color:blue) 2018-04-20, 晴%%
+----
+%%collapsebox
+!Work
+* 解决xposed新建模块部署失败问题
+** gradle利用provided引入依赖包
+** 创建assets/xposed_init文件，加入自己模块类全路径
+* 熟悉了逆向工具 AndroidKiller、jeb2
+* 调研alipay如何实现检测xposed、substrate环境并响应
+/%
+
+%%collapsebox
+!Life
+* 做了一晚上梦，和你在一起。
+/%
+

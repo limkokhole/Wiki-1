@@ -1,0 +1,16 @@
+# 显示当前界面的activity信息
+* dumpsys activity
+{{{
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+  Stack #33:
+    Task id #43
+      TaskRecord{cf24632 #43 A=com.famgy.virtualpartner U=0 sz=2}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.famgy.virtualpartner/.activity.MainActivity bnds=[81,1191][261,1371] (has extras) }
+        Hist #1: ActivityRecord{5c130ad u0 com.famgy.virtualpartner/.activity.WeatherPagesActivity t43}
+          Intent { cmp=com.famgy.virtualpartner/.activity.WeatherPagesActivity }
+          ProcessRecord{a24c0fc 29098:com.famgy.virtualpartner/u0a81}
+        Hist #0: ActivityRecord{ce1e812 u0 com.famgy.virtualpartner/.activity.MainActivity t43}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.famgy.virtualpartner/.activity.MainActivity bnds=[81,1191][261,1371] (has extras) }
+          ProcessRecord{a24c0fc 29098:com.famgy.virtualpartner/u0a81}
+}}}

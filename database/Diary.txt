@@ -3,11 +3,19 @@
 * 2018
 ** April
 *** [19|Diary20180419]
-*** 20
+*** [20|Diary20180420]
+*** [24|Diary20180424]
+*** [25|Diary20180425]
+*** [27|Diary20180427]
 ** May
 *** 1
+*** [8|Diary20180508]
 *** 22
+
 * 2019
 ** January
 
 /%
+
+[{ALLOW edit Admin}]
+[{ALLOW view Admin}]

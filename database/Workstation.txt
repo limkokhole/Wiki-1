@@ -1,28 +1,17 @@
-!Android安全检测：
+!任务：android设便安全检测：
+#%%(color:green)#框架攻击检测（检测是否存在HOOK框架（xposed/frida/substrate））%%
+#设备位置信息伪造（允许模拟位置开关、GPS定位模拟软件、GPS变化速度）
+#host文件修改（系统host文件篡改感知）
+#开发者选项（检测设备是否开启开发者选项）
+#游戏外挂（八门神器、葫芦侠、烧饼修改器、拇指玩、XX助手）
 
-* nexus5环境准备（参考：[https://blog.csdn.net/u011303443/article/details/53733433]）
-** 官方刷机： 
-***[镜像地址|https://developers.google.com/android/images#hammerhead]
-***刷机步骤：
-####按住音量下键和电源键，手机进入线刷模式（fastboot）
-####解压镜像
-####root权限下执行flash-all.sh
-***%%(color:red)注意/%：请下载factory image,而不是full ota image
-** 刷Recovery（TWRP）：
-***[官方地址(TWRP)|https://twrp.me/lg/lgnexus5.html]
-***安装步骤：
-####adb devices
-####adb reboot bootloader
-####fastboot flash recovery twrp.img
-####不要重启，直接通过音量上下键选择recovery模式
-** 设备root（SuperSU）：
-***[官方地址(SuperSU)|https://download.chainfire.eu/1016/SuperSU/UPDATE-SuperSU-v2.79-20161211114519.zip]
-***安装步骤：
-####按住音量下键和电源键，手机首先进入fastboot模式，通过音量上下键选择recovery模式
-####通过recovery模式的install安装SuperSU.zip(重命名为SuperSU.zip)
-** xposed安装：
-***[官方地址(framework)|https://dl-xda.xposed.info/framework/sdk23/arm/]
-***安装步骤：
-####按住音量下键和电源键，手机首先进入fastboot模式，通过音量上下键选择recovery模式
-####通过recovery模式的install安装xposed-v89-sdk23-arm.zip
-***[官方地址(apk)|http://repo.xposed.info/module/de.robv.android.xposed.installer]
+
+
+----
+
+* [系统host文件篡改感知|http://www.cnblogs.com/lanrenxinxin/p/5536969.html]
+* [阿里系产品Xposed Hook检测机制原理分析|https://bbs.pediy.com/thread-218848.htm]
+* [java层-hooking技巧|https://segmentfault.com/a/1190000007047376]
+* [检查允许模拟位置开关|https://blog.csdn.net/doris_d/article/details/51384285]
+* [检测设备是否开启开发者选项|https://blog.csdn.net/fang323619/article/details/75053479]
+* [检测游戏作弊|https://blog.csdn.net/u013895270/article/details/45558975]

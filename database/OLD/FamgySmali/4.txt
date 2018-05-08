@@ -1,0 +1,7 @@
+!Smali逆向调试
+* 把apk里面的编译后的代码转成smali
+** %%(color:blue)java -jar apktool.jar d myapp.apk -o ~/projects/myapp/src%%
+** java -jar baksmali-2.2.1.jar  d myapp.apk -o ~/projects/myapp/src
+* 利用Android Studio导入smali源码工程
+** 用import Project, 工程的目录定位到刚刚apk反编译后的的文件夹
+** 使用“Create project from existing sources”一路next到底
