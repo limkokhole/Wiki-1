@@ -1,17 +1,34 @@
-!任务：android设便安全检测：
-#%%(color:green)#框架攻击检测（检测是否存在HOOK框架（xposed/frida/substrate））%%
-#设备位置信息伪造（允许模拟位置开关、GPS定位模拟软件、GPS变化速度）
-#host文件修改（系统host文件篡改感知）
-#开发者选项（检测设备是否开启开发者选项）
-#游戏外挂（八门神器、葫芦侠、烧饼修改器、拇指玩、XX助手）
-
-
+!!必掌握知识
+* [https://www.jianshu.com/p/a07ccaad832d]
+* 集合类
+** hashmap
+* 多线程
+* JVM方面
+* 通信协议
+** TCP三次握手、四次挥手。
+** http请求报文结构、响应报文，状态码。
+** http2.0相比于http1.0的新特性，推送、多路复用、消息头压缩等。
+* 数据库
+!! 总结
+#java基础
+#集合类
+#多线程
+#JVM虚拟机
+#通信协议
+#数据库
+#操作系统
+#算法
+#你的技术方向
+项目。
 
 ----
 
-* [系统host文件篡改感知|http://www.cnblogs.com/lanrenxinxin/p/5536969.html]
-* [阿里系产品Xposed Hook检测机制原理分析|https://bbs.pediy.com/thread-218848.htm]
-* [java层-hooking技巧|https://segmentfault.com/a/1190000007047376]
-* [检查允许模拟位置开关|https://blog.csdn.net/doris_d/article/details/51384285]
-* [检测设备是否开启开发者选项|https://blog.csdn.net/fang323619/article/details/75053479]
-* [检测游戏作弊|https://blog.csdn.net/u013895270/article/details/45558975]
+!! 形成你的一套说辞架构。以多线程为例，问到你多线程？
+*可以先从为什么要使用多线程？
+*使用多线程有什么好处？
+*使用多线程一定会比单线程好吗？
+*多线程会导致什么问题？
+*导致问题的java内存模型是怎样的？
+*怎么解决这个问题？解决方法如volatile、synchronize关键字等它的底层实现是怎样的？
+*你是怎么使用多线程的？
+*使用线程池有什么好处……

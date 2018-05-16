@@ -12,6 +12,7 @@
 !Community
 * [DocumentShare]
 * [Github]
+* [Share]
 * [Downloads]
 
 !Special Pages

@@ -1,0 +1,2 @@
+* __开机自动启动配置__
+;: vim /etc/xdg/autostart/xxx.desktop

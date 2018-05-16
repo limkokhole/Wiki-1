@@ -1,0 +1,7 @@
+* Auto mount
+## sudo fdisk -l
+*** /dev/sda6
+## blkid /dev/sda6
+*** /dev/sda6: UUID="64b2210f-e5f0-4156-9bd2-1352614c6217" TYPE="ext4" PARTUUID="b336d4c4-06"
+## vim /etc/fstab
+*** UUID=64b2210f-e5f0-4156-9bd2-1352614c6217 /home/famgy/Var ext4      defaults      0       2

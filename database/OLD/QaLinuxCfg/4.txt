@@ -1,0 +1,2 @@
+* systemctl start networking.service 失败 (RTNETLINK answers: File exists)
+:; 解决办法： ip addr flush dev enp2s0

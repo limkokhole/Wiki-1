@@ -4,16 +4,24 @@
 %%collapse
 * 相关知识总结
 ** [Debian 知识总结|FamgyDebian]
+** [Ubuntu 知识总结|FamgyUbuntu]
 ** [Linux 知识总结|FamgyLinux]
+** [Mount 知识总结|FamgyMount]
 ** [Git 知识总结|FamgyGit]
 ** Web 知识总结
 *** [Nginx 相关|FamgyNginx]
 *** [Tomcat 相关|FamgyTomcat]
 
-/%
+* 问题解决总结
+** [系统配置问题|QaLinuxCfg]
 
-%%collapse
-* 其他
+* linux小工具
+** ncat 
+### ncat -l 8888
+### ncat 192.168.220.150 8888
+** s-nail
+### echo "hahaha" | s-nail -v -r "97684695@qq.com" -s "xxx" -S smtp="smtp.qq.com:25" -S smtp-use-starttls -S smtp-auth=login -S smtp-auth-user="97684695" -S smtp-auth-password='xxxxxxxx' -S ssl-verify=ignore 97684695@qq.com
+
 /%
 
 ! Android
@@ -87,6 +95,5 @@ for x in session.enumerate_modules():
 }}}
 
 
-
-
 /%
+

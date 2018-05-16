@@ -78,9 +78,16 @@
 * 磁盘分区：fdisk /dev/sdb
 * 文件系统格式化：mkfs.n
 
+* 挂载磁盘相关：
+** 显示磁盘id ： blkid /dev/sda1
+** 配置开机自动挂载：vim /etc/fstab
+*** UUID=64b2210f-e5f0-4156-9bd2-1352614c6217 /home/famgy/Var ext4    defaults             0       2
+
+
 * 网络端口查询命令：ss -46lpn
 
 * 修改照片尺寸：
 ** Convert -resize 640x386 1.jpg out1.jpg
 ** Find ./ -name ‘*.jpg’ -exec convert -resize 640x380 {}{};
 ** https://blog.csdn.net/jiangxinyu/article/details/1698997
+

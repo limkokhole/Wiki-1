@@ -1,0 +1,16 @@
+* __开机自动启动配置__
+;: vim /etc/xdg/autostart/xxx.desktop
+* __Dns'config is not be overwrite__
+{{{
+1) You shouldn't manually update your resolv.conf, because all changes will be overwritten by data that your local DHCP server provides. If you want it to be static, run sudo dpkg-reconfigure resolvconf and answer "no" to dynamic updates. If you want to add new entries there, edit /etc/resolvconf/resolv.conf.d/base and run sudo resolvconf -u, it will append your entries and DHCP server's entries.
+
+2) Try to edit your /etc/network/interfaces and add your entries there, like
+
+auto eth0 
+iface eth0 inet dhcp 
+dns-search google.com 
+dns-nameservers dnsserverip 
+and then restart /etc/init.d/networking restart or sudo ifdown -a and sudo ifup -a
+
+3) Your system uses udhcp which is a very small DHCP client program. The udhcp client negotiates a lease with the DHCP server and notifies a set of scripts when a leases is obtained or lost. You can read about it's usage here or just edit this script (as you did).
+}}}

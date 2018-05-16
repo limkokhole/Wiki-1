@@ -1,0 +1,6 @@
+* __开机自动启动配置__
+;: vim /etc/xdg/autostart/xxx.desktop
+* __dns'config is not be overwrite__
+** edit /etc/NetworkManager/NetworkManager.conf and add the following in the [main] section:
+*** dns=none
+*** /etc/resolv.conf might be a broken symlink that you will need to remove after doing that. Then, just create a new /etc/resolv.conf.
