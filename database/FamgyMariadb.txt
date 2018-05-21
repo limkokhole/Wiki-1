@@ -1,0 +1,6 @@
+!mariadb安装和配置
+#首先是 sudo apt install mariadb-server 安装上数据库。
+#然后 sudo su 切换至 Root 终端，通过 mariadb -uroot -p 登录到数据库，如果默认密码不是空的话，可以查看 '/etc/mysql/debian.cnf'。
+#这时候要做的是创建新用户：create user 'admin'@'localhost' identified by 'mysql'。
+#然后给新用户设置权限：grant all on *.* to 'admin'@'localhost'。
+#好了，我们又设置了一个方便的 "Root" 用户，只不过改了名字叫做 admin。

@@ -82,15 +82,8 @@
 *** [动态数组(ArrayList)|http://www.cnblogs.com/skywang12345/p/3308556.html]
 ** 线程
 ** [线程池|https://www.jianshu.com/p/50fffbf21b39]
-*** 默认实现类：ThreadPoolExecutor -> AbstractExecutorService -> ExecutorService -> Executor
-*** 常用实现类：Executors（newFixedThreadPool, newCachedThreadPool, newScheduledThreadPool , newSingleThreadExecutor ） -> ThreadPoolExecutor
-*** android中的应用：Okhttp
+*** ThreadPoolExecutor -> AbstractExecutorService -> ExecutorService -> Executor
 *** [明白Java线程池|https://www.jianshu.com/p/50fffbf21b39]
-** [maven|http://maven.apache.org/plugins/index.html]
-*** [Idea基于maven，java语言的spark环境搭建|https://blog.csdn.net/huanbia/article/details/69084895]
-** [mariadb|https://mariadb.com/kb/en/library/getting-started-with-the-java-connector/]
-** [gradle|https://docs.gradle.org/current/userguide/userguide.html]
-** [Okhttp|http://square.github.io/okhttp/#examples]
 /%
 
 ! Python
@@ -109,9 +102,6 @@ for x in session.enumerate_modules():
 
 }}}
 
-! 杂项
-* 获取每天更新的bing图
-;:http://guolin.tech/api/bing_pic
 
 /%
 

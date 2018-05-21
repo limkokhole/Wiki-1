@@ -1,0 +1,12 @@
+%%(color:blue) 2018-05-16, 晴%%
+----
+%%collapsebox
+!Work
+* 熟悉gradle
+* java实现mysql操作
+/%
+
+%%collapsebox赚钱
+!Life
+* 一个初值20的乾元镜（高级会光+低级敏捷增强）
+/%
