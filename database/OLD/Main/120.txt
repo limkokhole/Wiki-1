@@ -196,6 +196,10 @@ tools : mysql-workbench
 
 }}}
 
+! 杂项
+* 获取每天更新的bing图
+;:http://guolin.tech/api/bing_pic
+
 ! VPN
 * 熟悉vpn的几种协议
 #IPsec作为一个协议族 = 加密分组流的封装安全载荷（ESP） + 认证头（AH） + 密钥交换协议ike（ikev2）
@@ -205,8 +209,5 @@ tools : mysql-workbench
 #OpenVPN 允许参与建立VPN的单点使用预设的私钥，第三方证书，或者用户名/密码来进行身份验证。
 #OpenSWan是Linux下IPsec的最佳实现方式，其功能强大，最大程度地保证了数据传输中的安全性、完整性问题。
 
-! 杂项
-* 获取每天更新的bing图
-;:http://guolin.tech/api/bing_pic
 
 /%

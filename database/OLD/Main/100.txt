@@ -45,15 +45,6 @@
 /%
 
 %%collapse
-* 工程项目有
-** sdk
-*** [arr|https://jingyan.baidu.com/article/2a13832890d08f074a134ff0.html]
-** 获取应用sha1
-*** keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey
-*** 默认密码：android
-/%
-
-%%collapse
 * 逆向知识总结
 ** [Smali逆向调试|FamgySmali]
 ** jeb
@@ -66,11 +57,6 @@
 *** substrate
 *** [frida|FamgyFrida]
 
-/%
-
-%%collapse
-* 好用的apk应用
-** [Droid Info|https://droid-info.en.uptodown.com/android]
 /%
 
 %%collapse
@@ -106,10 +92,6 @@
 ** [gradle|https://docs.gradle.org/current/userguide/userguide.html]
 ** [Okhttp|http://square.github.io/okhttp/#examples]
 ** [gson|http://sites.google.com/site/gson/]
-** [htmlunit|http://htmlunit.sourceforge.net/dependency-info.html]
-** [jsoup|https://jsoup.org/]
-** 实现模式总结
-*** [观察者模式|https://www.cnblogs.com/luohanguo/p/7825656.html]
 /%
 
 ! Python
@@ -128,85 +110,9 @@ for x in session.enumerate_modules():
 
 }}}
 
-! Mariadb
-* SHOW DATABASES;      可以显示所有的数据库
-* SHOW TABLES;         将会显示所有的数据表
-* SELECT User, Host, Password FROM mysql.user;     查询用户信息
-* INSERT INTO cbg_equip (equip_name, game_ordersn, server_id) VALUE ('北冥龙军', 'ssppppp', 128);
-----
-* drop database if exists pwblog;
-* create database pwblog character set utf8;
-* use pwblog;
-* grant select, insert, update, delete on pwblog.* to 'gpf'@'localhost' identified by 'abcd';
-
-----
-
-* mysql -u root -p < schema.sql;
-
-----
-{{{
-create table user (
-    `id` varchar(50) not null primary key,
-    `email` varchar(50) not null,
-    `password` varchar(50) not null,
-    `admin` bool not null,
-    `name` varchar(50) not null,
-    `image` varchar(500) not null,
-    `created_at` real not null,
-    unique key `idx_email` (`email`),
-    key `idx_created_at` (`created_at`)
-) engine=innodb default charset=utf8;
-}}}
-
-{{{
-create table cbg_equip (
-   `id` int(11) not null auto_increment,
-   `equip_name` varchar(50) not null, `game_ordersn` varchar(50) not null, 
-   `server_id` int(11) not null,
-    primary key (id)
-) engine=InnoDb  default charset=utf8;
-}}}
-
-{{{
-一、导出数据库用mysqldump命令
-（注意:先cd到mysql的运行路径下，再执行一下命令）：
-1、导出数据和表结构：
-mysqldump -u用户名 -p密码 数据库名 > 数据库名.sql
-mysqldump -uroot -p dbname > dbname .sql
-敲回车后会提示输入密码
-2、只导出表结构
-mysqldump -u用户名 -p密码 -d 数据库名 > 数据库名.sql
-mysqldump -uroot -p -d dbname > dbname .sql
-
-二、导入数据库
-1、首先建空数据库
-mysql>create database dbname ;
-2、导入数据库
-方法一：
-（1）选择数据库
-mysql>use dbname ;
-（2）设置数据库编码
-mysql>set names utf8;
-（3）导入数据（注意sql文件的路径）
-mysql>source /home/xxxx/dbname .sql;
-方法二：
-mysql -u用户名 -p密码 数据库名 < 数据库名.sql
-
-tools : mysql-workbench
-
-}}}
-
-! VPN
-* 熟悉vpn的几种协议
-#IPsec作为一个协议族 = 加密分组流的封装安全载荷（ESP） + 认证头（AH） + 密钥交换协议ike（ikev2）
-#PPTP: Point to Point Tunneling Protocol --点到点隧道协议  = 密码验证协议（PAP） + 可扩展认证协议（EAP） | 可以选用MPPE、RSARC4或者DES等算法对数据报进行加密。
-#L2TP : 第 2 层隧道协议 (L2TP) 是IETF基于L2F （Cisco的第二层转发协议）开发的 PPTP 的后续版本
-#SSL VPN  SSL协议提供了数据私密性、端点验证、信息完整性等特性
-#OpenVPN 允许参与建立VPN的单点使用预设的私钥，第三方证书，或者用户名/密码来进行身份验证。
-#OpenSWan是Linux下IPsec的最佳实现方式，其功能强大，最大程度地保证了数据传输中的安全性、完整性问题。
-
 ! 杂项
 * 获取每天更新的bing图
 ;:http://guolin.tech/api/bing_pic
 
 /%
+
