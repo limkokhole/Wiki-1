@@ -197,18 +197,15 @@ tools : mysql-workbench
 }}}
 
 ! VPN
-#IPsec作为一个协议族 = 加密分组流的封装安全载荷（ESP） + 认证头（AH） + 密钥交换协议ike（ikev2），典型的OpenSWan，是Linux下IPsec的最佳实现方式，其功能强大，最大程度地保证了数据传输中的安全性、完整性问题。
-#PPTP: Point to Point Tunneling Protocol --点到点隧道协议  = 密码验证协议（PAP） + 可扩展认证协议（EAP） | 可以选用MPPE、RSARC4或者DES等算法对数据报进行加密。
-#L2TP : 第 2 层隧道协议 (L2TP) 是IETF基于L2F （Cisco的第二层转发协议）开发的 PPTP 的后续版本
-#SSL VPN  SSL协议提供了数据私密性、端点验证、信息完整性等特性。典型的是OpenVPN， 允许参与建立VPN的单点使用预设的私钥，第三方证书，或者用户名/密码来进行身份验证。
+##IPsec作为一个协议族 = 加密分组流的封装安全载荷（ESP） + 认证头（AH） + 密钥交换协议ike（ikev2），典型的OpenSWan，是Linux下IPsec的最佳实现方式，其功能强大，最大程度地保证了数据传输中的安全性、完整性问题。
+##PPTP: Point to Point Tunneling Protocol --点到点隧道协议  = 密码验证协议（PAP） + 可扩展认证协议（EAP） | 可以选用MPPE、RSARC4或者DES等算法对数据报进行加密。
+##L2TP : 第 2 层隧道协议 (L2TP) 是IETF基于L2F （Cisco的第二层转发协议）开发的 PPTP 的后续版本
+##SSL VPN  SSL协议提供了数据私密性、端点验证、信息完整性等特性。典型的是OpenVPN， 允许参与建立VPN的单点使用预设的私钥，第三方证书，或者用户名/密码来进行身份验证。
 * [熟悉vpn的几种协议|https://blog.csdn.net/kim_weir/article/details/79674732]
-* [Android VPN介绍|http://www.voidcn.com/article/p-klafrlxp-tp.html]
-* [NetGuard|https://github.com/M66B/NetGuard]
+* [Android VPN介绍|https://blog.csdn.net/jrunw/article/details/60956149]
 
 ! 杂项
 * 获取每天更新的bing图
 ;:http://guolin.tech/api/bing_pic
-
-* [图像SVG应用|https://www.jianshu.com/p/0555b8c1d26a]
 
 /%

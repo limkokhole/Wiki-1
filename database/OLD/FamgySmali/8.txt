@@ -6,7 +6,6 @@
 ## 用import Project, 工程的目录定位到刚刚apk反编译后的的文件夹
 ## 使用“Create project from existing sources”一路next到底
 ## 完成之后, 点击项目右键 Mark Directory As->Sources Root
-## [插件安装|https://bitbucket.org/JesusFreke/smali/downloads/]
 
 
 

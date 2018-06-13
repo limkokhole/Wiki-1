@@ -209,6 +209,4 @@ tools : mysql-workbench
 * 获取每天更新的bing图
 ;:http://guolin.tech/api/bing_pic
 
-* [图像SVG应用|https://www.jianshu.com/p/0555b8c1d26a]
-
 /%
