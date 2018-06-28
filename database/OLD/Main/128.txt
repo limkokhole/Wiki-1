@@ -95,13 +95,12 @@
 *** [堆栈(Stack)|JavaStack]
 *** [迭代器(Iterator)|JavaIterator]
 *** [动态数组(ArrayList)|http://www.cnblogs.com/skywang12345/p/3308556.html]
-** 多线程技巧总结
-*** [实现多线程同步线性处理|JavaSynchronized]
-*** [线程池|https://www.jianshu.com/p/50fffbf21b39]
-#### 默认实现类：ThreadPoolExecutor -> AbstractExecutorService -> ExecutorService -> Executor
-#### 常用实现类：Executors（newFixedThreadPool, newCachedThreadPool, newScheduledThreadPool , newSingleThreadExecutor ） -> ThreadPoolExecutor
-#### android中的应用：Okhttp
-#### [明白Java线程池|https://www.jianshu.com/p/50fffbf21b39]
+** 线程
+** [线程池|https://www.jianshu.com/p/50fffbf21b39]
+*** 默认实现类：ThreadPoolExecutor -> AbstractExecutorService -> ExecutorService -> Executor
+*** 常用实现类：Executors（newFixedThreadPool, newCachedThreadPool, newScheduledThreadPool , newSingleThreadExecutor ） -> ThreadPoolExecutor
+*** android中的应用：Okhttp
+*** [明白Java线程池|https://www.jianshu.com/p/50fffbf21b39]
 ** [maven|http://maven.apache.org/plugins/index.html]
 *** [Idea基于maven，java语言的spark环境搭建|https://blog.csdn.net/huanbia/article/details/69084895]
 ** [mariadb|https://mariadb.com/kb/en/library/getting-started-with-the-java-connector/]

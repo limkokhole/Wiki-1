@@ -7,7 +7,5 @@
 * android帖子
 ** [Java反射完全解析|https://www.jianshu.com/u/ceba5da6bd7a]
 ** [android大神网站-赵四|http://www.520monkey.com/]
-** [Android多线程篇|https://www.cnblogs.com/bugly/p/5519510.html]
-** [looper/thread/hander|https://www.cnblogs.com/RGogoing/p/6155263.html]
 
 /%

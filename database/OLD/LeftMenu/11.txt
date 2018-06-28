@@ -17,7 +17,7 @@
 * [Tools]
 
 !FamgyWebs
-* [艺术图像|http://www.famgy.com/Famgy/index.jsp]
+* [www.famgy.com/Famgy.jsp]
 
 !Special Pages
 * [LeftMenu]

@@ -1,0 +1,9 @@
+!事件相关
+* onTouch与onClick两种监听:
+{{{
+（1）首先没有设置OnClickListener的情况下，onTouch的返回值表示的就是View对点击事件是否消耗，如果在DOWN事件传递过来时返回false，那么剩下的MOVE直到UP的事件都不会被onTouch接收到；如果在DOWN事件返回true，那么剩下的直到UP的事件都会接受到，无论你之后的返回值。 
+（2）在同时设置了OnTouchListener与OnClickListener之后，情况就有些复杂了： 
+情况1：如果onTouch在DOWN时返回了true，那么onTouch就和（1）一样收到剩下的所有事件，但onClick就不会被执行； 
+情况2：如果onTouch在DOWN时返回了false，与（1）不同的是，onTouch尽管在DOWN时返回了false，但之后的所有事件仍能接受到，并且onClick会在之后被调用。
+}}}
+!界面相关

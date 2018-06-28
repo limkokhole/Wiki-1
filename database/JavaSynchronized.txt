@@ -1,0 +1,18 @@
+{{{
+            handlerV = new Handler() {
+                @Override
+                public void handleMessage(Message msg) {
+                    String cmd = (String) msg.obj;
+                    Log.i("=== HandlerV ", "received : " + cmd + " , curStatus :" + game.status);
+
+                    Canvas canvas = surfaceHolder.lockCanvas ();
+                    if (canvas != null)
+                        synchronized (game.getGame())
+                        {
+                            drawGame(canvas);
+                            //Thread.sleep (30);
+                            surfaceHolder.unlockCanvasAndPost (canvas);
+                        }
+                }
+            };
+}}}
