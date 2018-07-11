@@ -1,0 +1,5 @@
+!基础知识
+* [Smali无源码逆向调试|https://bbs.pediy.com/thread-220743.htm]
+* hook
+** [Native层（ElfHook）|https://github.com/anahadaw/ElfHook]
+** [Java层（YAHFA）|http://rk700.github.io/2017/03/30/YAHFA-introduction]

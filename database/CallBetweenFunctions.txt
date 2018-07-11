@@ -1,0 +1,40 @@
+* 验证记录
+{{{
+test.cpp :
+
+extern "C" void add(int a, int b);    /* C++调用C函数 */
+extern "C" int sub(int a, int b)      /* C++sub函数让C调用 */
+{
+        return a + b;
+}
+
+int main()
+{
+        add(9, 2);
+
+        return 0;
+}
+
+test1.c :
+
+void add(int a, int b)
+{
+        int c = a + b;
+        printf("%d", c);
+
+        return;
+}
+
+gcc test1.c -shared -fPIC -o libhaha.so
+g++ test.cpp -L. -lhaha -o test
+
+readelf -a haha.so  :
+
+    63: 0000000000201030     0 NOTYPE  GLOBAL DEFAULT   26 __bss_start
+    64: 0000000000201038     0 NOTYPE  GLOBAL DEFAULT   26 _end
+    65: 0000000000201030     0 NOTYPE  GLOBAL DEFAULT   25 _edata
+    66: 00000000000007a0    20 FUNC    GLOBAL DEFAULT   14 sub
+    67: 00000000000007b4    26 FUNC    GLOBAL DEFAULT   14 main
+    68: 0000000000000620     0 FUNC    GLOBAL DEFAULT   11 _init
+
+}}}

@@ -32,7 +32,6 @@
 ** [Android 基础控件总结|FamgyControls]
 ** [Android 开发技巧总结|FamgyAndroid]
 ** [shell命令总结|AndroidShell]
-** [总结Android逆向|AndroidHook]
 * 开发环境
 ** [Nexus5环境准备|Nexus5Config]
 ** [HTCOneS环境准备|HTCOneSConfig]
@@ -56,6 +55,21 @@
 /%
 
 %%collapse
+* 逆向知识总结
+** [Smali逆向调试|FamgySmali]
+** jeb
+/%
+
+%%collapse
+* hook相关总结
+** hook框架
+*** xposed
+*** substrate
+*** [frida|FamgyFrida]
+
+/%
+
+%%collapse
 * 好用的apk应用
 ** [Droid Info|https://droid-info.en.uptodown.com/android]
 /%
@@ -72,9 +86,6 @@
 ***[https://github.com/LineageOS/android]
 ***[导入源码到android studio|https://wiki.lineageos.org/import-android-studio-howto.html]
 /%
-
-! C/C++
-* [c与c++之间互相调用|CallBetweenFunctions]
 
 ! Java
 * [Java官方文档(api)|https://docs.oracle.com/javase/8/docs/api]
@@ -99,11 +110,8 @@
 ** [gson|http://sites.google.com/site/gson/]
 ** [htmlunit|http://htmlunit.sourceforge.net/dependency-info.html]
 ** [jsoup|https://jsoup.org/]
-** [class文件格式分析1|https://www.cnblogs.com/winner-0715/p/4935256.html]
-** [class文件格式分析2|https://www.52pojie.cn/thread-685752-1-1.html]
 ** 实现模式总结
 *** [观察者模式|https://www.cnblogs.com/luohanguo/p/7825656.html]
-* [Javaweb学习|http://www.cnblogs.com/Be-Strong/p/8084950.html]
 /%
 
 ! Python
