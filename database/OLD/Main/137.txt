@@ -32,7 +32,7 @@
 ** [Android 基础控件总结|FamgyControls]
 ** [Android 开发技巧总结|FamgyAndroid]
 ** [shell命令总结|AndroidShell]
-** [Android逆向总结|AndroidHook]
+** [总结Android逆向|AndroidHook]
 * 开发环境
 ** [Nexus5环境准备|Nexus5Config]
 ** [HTCOneS环境准备|HTCOneSConfig]
@@ -103,8 +103,7 @@
 ** [class文件格式分析2|https://www.52pojie.cn/thread-685752-1-1.html]
 ** 实现模式总结
 *** [观察者模式|https://www.cnblogs.com/luohanguo/p/7825656.html]
-* [Javaweb学习|FamgyJavaWeb]
-* [idea+gradle+命令行|https://blog.csdn.net/x_iya/article/details/68945373]
+* [Javaweb学习|http://www.cnblogs.com/Be-Strong/p/8084950.html]
 /%
 
 ! Python

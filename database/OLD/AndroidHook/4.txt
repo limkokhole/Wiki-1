@@ -5,7 +5,7 @@
 
 !实践总结
 * hook实现
-** [Native层（ElfHook）|https://github.com/iqiyi/xHook]
+** [Native层（ElfHook）|https://github.com/anahadaw/ElfHook]
 ** [Java层（YAHFA）|http://rk700.github.io/2017/03/30/YAHFA-introduction]
 
 *hook框架

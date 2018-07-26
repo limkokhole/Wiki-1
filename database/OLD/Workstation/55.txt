@@ -1,5 +1,4 @@
 !!必掌握知识
-* 玩转CMake
 * [https://www.jianshu.com/p/a07ccaad832d]
 * 集合类
 ** hashmap

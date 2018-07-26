@@ -15,9 +15,6 @@
 * Android逆向安全
 ** [APK打包基本知识.pptx]
 
-* VPN知识分享
-** [我的vpn-分享.pptx]
-
 /%
 
 

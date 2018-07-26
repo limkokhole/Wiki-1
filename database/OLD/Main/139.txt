@@ -103,7 +103,7 @@
 ** [class文件格式分析2|https://www.52pojie.cn/thread-685752-1-1.html]
 ** 实现模式总结
 *** [观察者模式|https://www.cnblogs.com/luohanguo/p/7825656.html]
-* [Javaweb学习|FamgyJavaWeb]
+* [Javaweb学习|http://www.cnblogs.com/Be-Strong/p/8084950.html]
 * [idea+gradle+命令行|https://blog.csdn.net/x_iya/article/details/68945373]
 /%
 

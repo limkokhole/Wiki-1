@@ -14,10 +14,3 @@ Display #0 (activities from top to bottom):
           Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.famgy.virtualpartner/.activity.MainActivity bnds=[81,1191][261,1371] (has extras) }
           ProcessRecord{a24c0fc 29098:com.famgy.virtualpartner/u0a81}
 }}}
-
-* /system 增加读写权限
-** [应用改为系统应用|https://blog.csdn.net/xx326664162/article/details/53406933]
-{{{
-mount -o remount /dev/block/nandd /system 
-
-}}}
